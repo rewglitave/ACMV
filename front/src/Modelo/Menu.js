@@ -8,6 +8,8 @@ import logo from './logo.png'
 
 //import teacher1 from "./images/teacher1.jpg"
 
+
+
 export default function Menu(props)
 {
 
@@ -15,57 +17,58 @@ export default function Menu(props)
     return(
         
             <div className="fundologo">
-            <div className='row fonteItim'>
-                <div className='col-2 text-center'>
-                <img src={logo} />
+            <div className='row fonteItim mt-1'>
+                <div className='col-2'>
+                <img src={logo}width="100%" className='mx-auto d-block'/>
 
                 </div>
             
 
-        <Nav defaultActiveKey="/home" as="ul" className='justify-content-center col'>
-            
-            
+        <Nav defaultActiveKey="/home" as="ul" className='justify-content-center col align-items-center' >
+        
 
             <Nav.Item as="li">
                 <Nav.Link >
-                    <Link to="/">Home</Link>
+                    <Link to="/" style={{textDecoration: 'none'}} >Home</Link>
+                </Nav.Link>
+            </Nav.Item>
+
+            
+            <Nav.Item as="li">
+                <Nav.Link >
+                    <Link to="/precadastro" style={{textDecoration: 'none'}}>Cadastros</Link>
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
                 <Nav.Link >
-                    <Link to="/precadastro">Cadastros</Link>
+                    <Link to="/" style={{textDecoration: 'none'}}>Reservas</Link>
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
                 <Nav.Link >
-                    <Link to="/">Reservas</Link>
+                    <Link to="/" style={{textDecoration: 'none'}}>Check-out</Link>
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
                 <Nav.Link >
-                    <Link to="/">Check-out</Link>
+                    <Link to="/" style={{textDecoration: 'none'}}>Relatorios</Link>
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
                 <Nav.Link >
-                    <Link to="/">Relatorios</Link>
-                </Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li">
-                <Nav.Link >
-                    <Link to="/">Login</Link>
+                    <Link to="/" style={{textDecoration: 'none'}}>Login</Link>
                 </Nav.Link>
             </Nav.Item>
 
      
         
         </Nav>
-        <div class="text-center col-2 mt-3">
-            <img src={imagehotel} width="30%" class="rounded" />
+        <div class="col-2 mt-1">
+            <img src={imagehotel} width="50%" className="mx-auto d-block" />
         </div>
 
         </div>
-        <div className='text-center mb-3'>______________________________________________________________________________________</div>
+        
         <div className='text-center'>{props.tituloPagina}</div>
 
         </div>
