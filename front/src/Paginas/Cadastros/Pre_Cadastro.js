@@ -1,5 +1,5 @@
 import Menu from "../../Modelo/Menu";
-import {Row,Button} from 'react-bootstrap';
+import {Row,Button,Modal} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Pagina from "../../Modelo/Pagina";
 import { useState } from "react";
@@ -63,7 +63,10 @@ let formulario = document.getElementById('Form_PreCadastro'),
   function Enviar(e)
   {e.preventDefault()
     if(nome && telefone && cpf && rua && cep && numero)
-       setMensagemRodape('Todos os Campos Preenchidos')
+    {setMensagemRodape('Todos os Campos Preenchidos')
+    handleShow()
+    }
+       
     else
     setMensagemRodape('Falta Campos')
      
@@ -72,6 +75,11 @@ let formulario = document.getElementById('Form_PreCadastro'),
     
   
   }
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
     return(
@@ -93,7 +101,7 @@ let formulario = document.getElementById('Form_PreCadastro'),
       <Form.Group className="mb-3 col-3" controlId="">
         <Form.Label>CPF</Form.Label>
         <Form.Control type="text" className="text-center" maxLength={11} placeholder="XXX.XXX.XXX-XX" id="cpf" onBlur={(e)=> {armazenaEstado(e)}} />
-        <Form.Text className="text-muted aviso ">
+        <Form.Text className="text-muted aviso">
           Digite apenas os 11 numeros
         </Form.Text>
       </Form.Group>
@@ -115,12 +123,32 @@ let formulario = document.getElementById('Form_PreCadastro'),
 
       
       <div className="text-center">
-        <Button type="submit" onClick={(e)=> {Enviar(e)}} >Pré-Cadastro</Button>
+
+        <Button type="submit" onClick={(e)=> {Enviar(e)}} to="/">Pré-Cadastro</Button>
         
+
       </div>
-      <div className="text-center"><BotaoDivertido titulo="Pre-Cadastro"/></div>
+      
         </Row>
         </Form>
+        
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
         </Pagina>
         <Row>
           <Rodape mensagemRodape={mensagemRodape}/>

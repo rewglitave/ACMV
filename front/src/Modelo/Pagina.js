@@ -10,7 +10,7 @@ export default function Pagina(props)
     return(
         <>
         <Menu  tituloPagina={props.tituloPagina} className=""/>
-        <div className="col-8 mx-auto fundoresto">
+        <div className="col-8 mx-auto fundoresto mb-1">
         {props.children}
         </div>
         </>

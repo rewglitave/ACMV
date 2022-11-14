@@ -36,7 +36,7 @@ export default function Menu(props)
             
             <Nav.Item as="li">
                 <Nav.Link >
-                    <Link to="/precadastro" style={{textDecoration: 'none'}}>Cadastros</Link>
+                    <Link to="/cadastros" style={{textDecoration: 'none'}}>Cadastros</Link>
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
