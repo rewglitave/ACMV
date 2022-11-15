@@ -107,7 +107,7 @@ nome,telefone,cpf,rua,numero,cep
         <><Pagina>
           
         
-        <Form className="border bg-secondary" id="Form_PreCadastro">
+        <Form className="" id="Form_PreCadastro">
           <p className="text-center">Pré-Cadastro</p>
         <Row  >
         <Form.Group className="mb-3 col-12" controlId="">

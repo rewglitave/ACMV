@@ -11,7 +11,7 @@ export default function Reg_hospede(props)
 
     return (
         <Pagina>
-            <section className="bg-secondary border">
+            
                 <p className="text-center">Registros Hospedes</p>
               
     <Table striped bordered hover variant="dark">
@@ -57,10 +57,10 @@ export default function Reg_hospede(props)
     </Table>
     <div className="text-center">
        <Link to="/precadastro" className="mx-auto">
-        <Button >CAdastrar Novo Hospede</Button>
+        <Button >Cadastrar Novo Hospede</Button>
       </Link>
     </div>
-            </section>
+            
         </Pagina>
         
         
