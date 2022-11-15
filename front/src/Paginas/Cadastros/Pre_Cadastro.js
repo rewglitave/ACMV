@@ -4,8 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Pagina from "../../Modelo/Pagina";
 import { useState } from "react";
 import Rodape from "../../Modelo/Rodape";
+import {Link} from 'react-router-dom'
 import BotaoDivertido from "../../Modelo/BotaoDivertido";
-
+import listaHospede from '../ExibicaoRegistros/baseDadosFake/BD_Hospede'
 
 export default function Pre_Cadastro(props)
 {
@@ -26,6 +27,7 @@ let formulario = document.getElementById('Form_PreCadastro'),
     [cep,setCep] = useState(''),
     [mensagemRodape,setMensagemRodape] = useState('')
 
+ let hospede = []
   function armazenaEstado(e)
   { e.preventDefault()
 
@@ -59,11 +61,30 @@ let formulario = document.getElementById('Form_PreCadastro'),
 
 
   }
+/*
+nome,telefone,cpf,rua,numero,cep
+{nomeHospede:"Rewgli",
+     cpf:"888.888.888-88",
+     telefone:"3456656456",
+     rua:"rua 2",
+     cep:"19400-002",
+     numero:"02"}
 
+*/
   function Enviar(e)
   {e.preventDefault()
     if(nome && telefone && cpf && rua && cep && numero)
     {setMensagemRodape('Todos os Campos Preenchidos')
+    
+     listaHospede.push({nomeHospede:nome,
+     cpf:cpf,
+     telefone:telefone,
+     rua:rua,
+     cep:cep,
+     numero:numero})
+
+
+     
     handleShow()
     }
        
@@ -133,18 +154,28 @@ let formulario = document.getElementById('Form_PreCadastro'),
         </Form>
         
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+      <Modal show={show} onHide={handleClose} className="text-light">
+        <Modal.Header closeButton className="bg-secondary">
+          <Modal.Title>Deseja gravar esse Hóspede?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Body className="bg-secondary">
+          <p>Nome Hospede:<b> {nome}</b> </p>
+          <p>CPF: <b>{cpf}</b></p>
+          <p>Telefone: <b> {telefone} </b></p>
+          <p>Rua: <b> {rua} </b></p>
+          <p>CEP:<b>  {cep}</b> </p>
+          <p>Numero:<b>  {numero}</b> </p>
+          
+        </Modal.Body>
+        <Modal.Footer className="bg-secondary">
+          <Button variant="secondary border" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Link to="/reg_Hospede" nome={nome}>
+          <Button variant="primary border" onClick={handleClose}>
             Save Changes
           </Button>
+          </Link>
         </Modal.Footer>
       </Modal>
 

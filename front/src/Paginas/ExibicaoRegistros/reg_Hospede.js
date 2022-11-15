@@ -1,13 +1,19 @@
 import Pagina from "../../Modelo/Pagina";
-import {Table} from 'react-bootstrap'
+import {Table,Button} from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import listaHospede from './baseDadosFake/BD_Hospede'
 
-export default function Reg_hospede()
+export default function Reg_hospede(props)
 {
+
+  
+
+
     return (
         <Pagina>
             <section className="bg-secondary border">
                 <p className="text-center">Registros Hospedes</p>
+              
     <Table striped bordered hover variant="dark">
       <thead>
         <tr>
@@ -21,6 +27,9 @@ export default function Reg_hospede()
       </thead>
       <tbody>
         {
+
+         
+
         listaHospede.map((hospede) =>{
         return <tr key={hospede.cpf}>
             <td>{hospede.nomeHospede}</td>
@@ -32,10 +41,13 @@ export default function Reg_hospede()
         </tr>
         
         })
+
+
+
         }
         
         
-        
+        {props.nome}
         
           
           
@@ -43,6 +55,11 @@ export default function Reg_hospede()
                 
       </tbody>
     </Table>
+    <div className="text-center">
+       <Link to="/precadastro" className="mx-auto">
+        <Button >CAdastrar Novo Hospede</Button>
+      </Link>
+    </div>
             </section>
         </Pagina>
         

@@ -5,6 +5,7 @@ import Home from "./Home";
 import Pre_Cadastro from "./Paginas/Cadastros/Pre_Cadastro";
 import Cadastros from "./Paginas/Cadastros/Cadastros";
 import Reg_hospede from "./Paginas/ExibicaoRegistros/reg_Hospede";
+import Reg_funcionario from "./Paginas/ExibicaoRegistros/reg_Funcionario";
 
 
 
@@ -19,6 +20,8 @@ function App() {
           <Route path="/precadastro" element={<Pre_Cadastro tituloPagina="Pre-Cadastro"/>} />
           <Route path="/cadastros" element={<Cadastros tituloPagina="Cadastros"/>} />
           <Route path="/reg_hospede" element={<Reg_hospede tituloPagina="Cadastros"/>} />
+          <Route path="/reg_funcionario" element={<Reg_funcionario tituloPagina="Cadastros"/>} />
+
 
           
       </Routes>

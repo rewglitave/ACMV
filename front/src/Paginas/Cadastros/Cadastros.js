@@ -17,7 +17,7 @@ export default function Cadastros()
                 <p className="text-center">Cadastros</p>
                 <Row className="text-center col-10 mx-auto">
                     <div className="col mt-3">
-                        <Button>Hospede</Button>
+                    <Link to="/precadastro"><Button>Hospedes</Button></Link>
                     </div>
                     <div className="col mt-3">
                         <Button>Funcionario</Button>
@@ -31,13 +31,13 @@ export default function Cadastros()
                 <p className="text-center mt-5">Visualização de Registros</p>
                 <Row className="text-center col-10 mx-auto">
                     <div className="col mt-3">
-                        <Link to="/reg_hospede"><Button>Hospede</Button></Link>
+                        <Link to="/reg_hospede"><Button>Hospedes</Button></Link>
                     </div>
                     <div className="col mt-3">
-                        <Button>Funcionario</Button>
+                    <Link to="/reg_funcionario"><Button>Funcionarios</Button></Link>
                     </div>
                     <div className="col mt-3">
-                        <Button>Fornecedor</Button>
+                    <Link to="/reg_fornecedor"><Button>Fornecedores</Button></Link>
                     </div>
                     
                 </Row>
