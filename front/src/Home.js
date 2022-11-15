@@ -1,5 +1,6 @@
-import Menu from "./Modelo/Menu"
-import Pagina from "./Modelo/Pagina"
+
+import Pagina from "./Victor/Modelo/Pagina"
+
 
 
 
@@ -7,11 +8,12 @@ export default function Home(props)
 {
 
         return(
-            <Pagina>
+            
+           <Pagina>
             
             
-            <div className="bordesdsr">Home</div>
+            <div className="border">Home</div>
             
-            </Pagina>
+           </Pagina>
             )
 }

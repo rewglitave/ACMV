@@ -11,7 +11,10 @@ export default function Pagina(props)
         <>
         <Menu  tituloPagina={props.tituloPagina} className=""/>
         <div className="col-8 mx-auto fundoresto mb-1">
+        <section className="bg-secondary border m-2">
+
         {props.children}
+        </section>
         </div>
         </>
         

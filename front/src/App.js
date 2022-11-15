@@ -1,11 +1,11 @@
 import { Container,Row } from "react-bootstrap";
-import './fonte/addFont.css'
+import './Victor/fonte/addFont.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./Home";
-import Pre_Cadastro from "./Paginas/Cadastros/Pre_Cadastro";
-import Cadastros from "./Paginas/Cadastros/Cadastros";
-import Reg_hospede from "./Paginas/ExibicaoRegistros/reg_Hospede";
-import Reg_funcionario from "./Paginas/ExibicaoRegistros/reg_Funcionario";
+import Pre_Cadastro from "./Victor/Paginas/Cadastros/Pre_Cadastro";
+import Cadastros from "./Victor/Paginas/Cadastros/Cadastros";
+import Reg_hospede from "./Victor/Paginas/ExibicaoRegistros/reg_Hospede";
+import Reg_funcionario from "./Victor/Paginas/ExibicaoRegistros/reg_Funcionario";
 
 
 
@@ -15,16 +15,36 @@ function App() {
       <Row className="mx-auto col-12 fonteItim h4">
         <BrowserRouter>
 
-        <Routes>
+        <Routes> {/*Victor*/}
           <Route path="/" element={<Home tituloPagina="Home"/>}/>
           <Route path="/precadastro" element={<Pre_Cadastro tituloPagina="Pre-Cadastro"/>} />
           <Route path="/cadastros" element={<Cadastros tituloPagina="Cadastros"/>} />
           <Route path="/reg_hospede" element={<Reg_hospede tituloPagina="Cadastros"/>} />
           <Route path="/reg_funcionario" element={<Reg_funcionario tituloPagina="Cadastros"/>} />
+       </Routes>
 
+       
+       <Routes>{/*Alan*/}
+        
+       </Routes>
 
-          
-      </Routes>
+       
+       <Routes>{/*Carlos*/}
+        
+       </Routes>
+
+       
+       <Routes>{/*Guilherme*/}
+        
+       </Routes>
+       
+       <Routes>{/*Mauricio*/}
+
+       </Routes>
+       
+       
+
+       
 
       </BrowserRouter>
      </Row>

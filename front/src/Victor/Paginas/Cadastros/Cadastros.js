@@ -13,7 +13,7 @@ export default function Cadastros()
         
         <>
             <Pagina>
-                <section className="bg-secondary border m-2">
+                
                 <p className="text-center">Cadastros</p>
                 <Row className="text-center col-10 mx-auto">
                     <div className="col mt-3">
@@ -41,7 +41,7 @@ export default function Cadastros()
                     </div>
                     
                 </Row>
-                </section>
+                
 
             </Pagina>
             <Rodape/>
